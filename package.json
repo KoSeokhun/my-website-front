@@ -54,5 +54,6 @@
   "main": "index.js",
   "repository": "https://github.com/KoSeokhun/my-website.git",
   "author": "IYABA <seokhunv@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {}
 }
