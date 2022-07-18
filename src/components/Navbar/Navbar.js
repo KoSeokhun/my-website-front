@@ -14,10 +14,18 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-const drawerWidth = 240;
-const navItems = ['Home', 'Example1', 'Example2', 'About', 'Contact']; // Navbar category.
 
 function Navbar(props) {
+    // auth state.
+    const [auth, setAuth] = useState(false);
+    
+    // drawer width.
+    const drawerWidth = 240;
+    
+    // Navbar categories.
+    const navItems = auth ? ['Home', 'Example1', 'Example2', 'About', 'Contact', 'Profile', 'LogOut',]
+        : ['Home', 'Example1', 'Example2', 'About', 'Contact', 'SignUp', 'LogIn',];
+
     // import useNavigate hook.
     const navigate = useNavigate();
 
@@ -55,6 +63,7 @@ function Navbar(props) {
                     </ListItem>
                 ))}
             </List>
+
         </Box>
     )
     
